@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nhiệm vụ Natlan 5.5</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="quests" data-region="natlan" data-version="5.5">
+    <main class="app-container">
+        <header class="page-header">
+            <div>
+                <h1>Nhiệm vụ Natlan - Phiên bản 5.5</h1>
+                <p style="color: var(--muted); margin-top: 6px;">Các nhiệm vụ trong phiên bản 5.5.</p>
+            </div>
+            <div class="actions">
+                <button class="btn btn-secondary" id="themeBtn">Đổi giao diện</button>
+                <button class="btn btn-danger" id="logoutBtn">Đăng xuất</button>
+            </div>
+        </header>
+
+        <section class="progress-box">
+            <div class="progress-row">
+                <span>Tiến độ phiên bản 5.5</span>
+                <strong id="progressText">0/10 nhiệm vụ (0%)</strong>
+            </div>
+            <progress id="progressBar" value="0" max="10"></progress>
+        </section>
+
+        <div class="toolbar">
+            <input id="searchInput" type="search" placeholder="Tìm kiếm nhiệm vụ...">
+            <select id="filterSelect">
+                <option value="all">Tất cả nhiệm vụ</option>
+                <option value="pending">Chưa hoàn thành</option>
+                <option value="completed">Đã hoàn thành</option>
+            </select>
+            <button class="btn btn-secondary" id="resetButton">Đặt lại</button>
+        </div>
+
+        <ul class="quest-list"></ul>
+        <p id="emptyMessage" class="empty-message" hidden>Không tìm thấy nhiệm vụ phù hợp.</p>
+        <a class="back-link" href="natlan-quests.html">← Quay lại các phiên bản Natlan</a>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>

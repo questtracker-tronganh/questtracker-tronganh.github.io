@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quest Tracker - Đăng nhập</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="app-container narrow-container">
+        <h1 class="login-title">Quest Tracker</h1>
+
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="username">Tên tài khoản</label>
+                <input
+                    type="text"
+                    id="username"
+                    placeholder="Nhập tên tài khoản"
+                    autocomplete="username"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="password">Mật khẩu</label>
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Nhập mật khẩu"
+                    autocomplete="current-password"
+                    required
+                >
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%;">
+                Đăng nhập
+            </button>
+
+            <button type="button" id="registerBtn" class="btn btn-secondary" style="width: 100%; margin-top: 10px;">
+                Tạo tài khoản
+            </button>
+
+            <p id="formMessage" class="form-message"></p>
+        </form>
+
+        <p class="login-note">
+            Đây là phiên bản chạy bằng HTML thuần. Tài khoản và tiến trình
+            được lưu trên trình duyệt hiện tại.
+        </p>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>

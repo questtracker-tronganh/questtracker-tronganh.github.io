@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quest Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="dashboard">
+    <main class="app-container">
+        <header class="page-header">
+            <div>
+                <h2>Quest Tracker</h2>
+                <p>Xin chào, <strong id="userDisplayName"></strong>!</p>
+            </div>
+
+            <div class="actions">
+                <button class="btn btn-secondary" id="themeBtn">Đổi giao diện</button>
+                <button class="btn btn-danger" id="logoutBtn">Đăng xuất</button>
+            </div>
+        </header>
+
+        <section class="stats-grid">
+            <div class="stat-card">
+                Tổng nhiệm vụ
+                <strong id="totalProgress">0</strong>
+            </div>
+
+            <div class="stat-card">
+                Đã hoàn thành
+                <strong id="completedProgress">0</strong>
+            </div>
+
+            <div class="stat-card">
+                Tiến độ chung
+                <strong id="overallPercent">0%</strong>
+            </div>
+        </section>
+
+        <h3 style="margin-bottom: 14px;">Các khu vực</h3>
+
+        <div class="folder-grid">
+            <a class="folder-card" href="natlan.html">
+                <div class="folder-icon">
+                    <img src="https://upload-os-bbs.hoyolab.com/upload/2024/08/28/14122639/2525559e7abe3b903d51132ffa206aea_7322026217306021839.png?x-oss-process=image%2Fresize%2Cs_1000%2Fauto-orient%2C0%2Finterlace%2C1%2Fformat%2Cwebp%2Fquality%2Cq_70" alt="Natlan">
+                </div>
+                <div class="folder-title">Natlan</div>
+                <p data-completed="natlan">0/60 hoàn thành</p>
+                <progress class="region-progress" data-progress="natlan" value="0" max="60"></progress>
+            </a>
+
+            <a class="folder-card" href="nod-krai.html">
+                <div class="folder-icon">
+                    <img src="https://wallpaperaccess.com/full/24202633.png" alt="Nod Krai">
+                </div>
+                <div class="folder-title">Nod Krai</div>
+                <p data-completed="nod-krai">0/4 hoàn thành</p>
+                <progress class="region-progress" data-progress="nod-krai" value="0" max="4"></progress>
+            </a>
+
+            <a class="folder-card" href="snezhnaya.html">
+                <div class="folder-icon">
+                    <img src="https://fastcdn.hoyoverse.com/content-v2/plat/165689/7eb068c6621d46803f83e5a870f05517_2335209533801543268.jpg" alt="Snezhnaya">
+                </div>
+                <div class="folder-title">Snezhnaya</div>
+                <p data-completed="snezhnaya">0/4 hoàn thành</p>
+                <progress class="region-progress" data-progress="snezhnaya" value="0" max="4"></progress>
+            </a>
+        </div>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>

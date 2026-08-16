@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nhiệm vụ Snezhnaya</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="quests" data-region="snezhnaya">
+    <main class="app-container">
+        <header class="page-header">
+            <div>
+                <h1>Nhiệm vụ chính Snezhnaya</h1>
+                <p style="color: var(--muted); margin-top: 6px;">
+                    Theo dõi các nhiệm vụ bạn đã hoàn thành.
+                </p>
+            </div>
+
+            <div class="actions">
+                <button class="btn btn-secondary" id="themeBtn">Đổi giao diện</button>
+                <button class="btn btn-danger" id="logoutBtn">Đăng xuất</button>
+            </div>
+        </header>
+
+        <section class="progress-box">
+            <div class="progress-row">
+                <span>Tiến độ Snezhnaya</span>
+                <strong id="progressText">0/4 nhiệm vụ (0%)</strong>
+            </div>
+            <progress id="progressBar" value="0" max="4"></progress>
+        </section>
+
+        <div class="toolbar">
+            <input id="searchInput" type="search" placeholder="Tìm kiếm nhiệm vụ...">
+
+            <select id="filterSelect">
+                <option value="all">Tất cả nhiệm vụ</option>
+                <option value="pending">Chưa hoàn thành</option>
+                <option value="completed">Đã hoàn thành</option>
+            </select>
+
+            <button class="btn btn-secondary" id="resetButton">
+                Đặt lại
+            </button>
+        </div>
+
+        <ul class="quest-list">
+            <li class="quest-item">
+                <input type="checkbox" id="snezhnaya-quest-1">
+                <label for="snezhnaya-quest-1">Khám phá vùng đất băng giá</label>
+            </li>
+            <li class="quest-item">
+                <input type="checkbox" id="snezhnaya-quest-2">
+                <label for="snezhnaya-quest-2">Tìm hiểu về Fatui</label>
+            </li>
+            <li class="quest-item">
+                <input type="checkbox" id="snezhnaya-quest-3">
+                <label for="snezhnaya-quest-3">Gặp gỡ các nhân vật quan trọng</label>
+            </li>
+            <li class="quest-item">
+                <input type="checkbox" id="snezhnaya-quest-4">
+                <label for="snezhnaya-quest-4">Hoàn thành nhiệm vụ chính</label>
+            </li>
+        </ul>
+
+        <p id="emptyMessage" class="empty-message" hidden>
+            Không tìm thấy nhiệm vụ phù hợp.
+        </p>
+
+        <a class="back-link" href="snezhnaya.html">← Quay lại Snezhnaya</a>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
